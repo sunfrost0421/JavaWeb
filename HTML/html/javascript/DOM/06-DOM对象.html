@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <img src="../../img/hjx.jpg" width="100" height="100" id="my_img"><br>
+    <input type="button" value="qrc" onclick=showQrc()>
+    <input type="button" value="hjx" onclick=showHjx()>
+    <br>
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+    <br>
+    <div>
+        床前明月光，疑是地上霜。<br>
+        举头望明月，低头思故乡。<br>
+    </div>
+<script>
+    function showQrc(){
+        document.getElementById("my_img").src = "../../img/qrc.jpg"
+    }
+    function showHjx(){
+        document.getElementById("my_img").src = "../../img/hjx.jpg"
+    }
+var hobbies = document.getElementsByName("hobby");
+for (let i = 0; i < hobbies.length; i++){
+    // alert(hobbies[i]);
+    hobbies[i].checked = true;
+}
+var div = document.getElementsByTagName("div");
+div[0].style.color = "red"
+document.getElementById("click_qrc").onclick = showQrc();
+
+
+</script>
+</body>
+</html>

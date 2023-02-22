@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css练习</title>
+</head>
+<!--定义样式区域，里面可以定义多个可以选择的样式，也叫css选择器-->
+<style>
+    /*  元素选择器：html的标签名{样式} ：可以修改html相关标签的表达样式 */
+    h1{
+        background: black;      /*背景颜色*/
+        color:white;            /*字体颜色*/
+        text-align: center;     /*字体居中*/
+        padding: 5px;           /*填充大小*/
+    }
+    /*  ID选择器：#ID名称{样式} ：可以定义一种id名称的表达样式，使用时在标签后面加上id="ID名称"即可 */
+    #poetry_text{
+        font-family: 楷体;
+        font-size: larger;
+        color: black;
+        background: beige;
+        text-align: center;
+        line-height: 30px;
+        height: 300px;
+        width: 100%;
+        padding: 5px;
+    }
+    /*  类选择器：.类名称{样式} ：可以定义一种类名称的表达样式，使用时在标签后面加上class="类名称"即可 */
+    .poetry_writer{
+        font-family: 宋体;
+        font-size: medium;
+        color: black;
+        background: beige;
+        text-align: end;
+    }
+</style>
+<body>
+<!--    <h1>标题</h1>-->
+<!--    <hr>-->
+<!--    <p>段落1</p>-->
+<!--    <p>段落2</p>-->
+<!--    <hr>-->
+<!--内部样式导入css-->
+    <h1>静月思</h1>
+    <div class="poetry_writer">
+        【唐】李白
+    </div>
+    <div id="poetry_text">
+        床前明月光，疑是地上霜。<br>
+        举头望明月，低头思故乡。<br>
+    </div>
+</body>
+</html>

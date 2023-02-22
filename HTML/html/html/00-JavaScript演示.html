@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript演示</title>
+</head>
+<body>
+
+<h2>JavaScript 能做什么</h2>
+
+<p id="demo">JavaScript 能够改变 HTML 内容</p>
+<input type="button" onclick='changeText()' value="点击我">
+<hr>
+<p>JavaScript 能改变图像的 src 属性值</p>
+<input type="button" onclick="on()" value="开灯">
+<img id="myImage" src="../img/qrc.jpg">
+<input type="button" onclick="off()" value="关灯">
+<hr>
+<script>
+    function on(){
+        document.getElementById('myImage').src='../img/qrc.jpg';
+    }
+
+    function off(){
+        document.getElementById('myImage').src='../img/hjx.jpg'
+    }
+</script>
+
+</body>
+</html>

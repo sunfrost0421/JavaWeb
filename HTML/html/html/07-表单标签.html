@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--
+  action:指定表单数据提交的URL
+    *表单项数据如果想要提交，则必须加一个name的属性
+  method:指定表单提交方法
+    *get（默认值）:请求的参数会跟在URL后面,但是URL的长度有限制，所以请求参数有限制
+    *post:会在http的请求体中，请求参数无限制
+  如果需要点击文本也能触发输入框，用Label框选文本，然后for到相应的input的id中
+  单选框提交的时候要加属性值value
+
+-->
+  <form action="#" method="post">
+    <label for="friendname">friends'name:</label>
+    <input type="text" name="friendname" id="friendname"><br>
+    <label for="boy">sex:</label>
+    <input type="radio" name="gender" id="boy" value="boy"><label for="boy">男</label>
+    <input type="radio" name="gender" id="girl" value="girl"><label for="girl">女</label><br>
+    <label for="sports">hobbies:</label>
+    <input type="checkbox" name="hobby" id="sports" value="sports"> 运动
+    <input type="checkbox" name="hobby" id="eat" value="eat"> 吃吃吃
+    <input type="checkbox" name="hobby" id="sleep" value="sleep"> 睡大觉<br>
+    头像：<input type="file"><br>
+<!--option如果不写value，那么提交的就是标签中间的内容，如果写value那么提交的就是value-->
+    地点：
+    <select name="city">
+        <option value="beijing">北京</option>
+        <option value="shanghai">上海</option>
+        <option>南京</option>
+    </select><br>
+    个人描述：<textarea cols="20" rows="5" name="text"></textarea>
+
+    <br>
+    <input type="submit" value="注册"><br>
+
+
+  </form>
+</body>
+</html>
