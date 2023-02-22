@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--给pojo路径下的所有类取别名，这样在这个路径下的名字不区分大小写，也不用写完整包名-->
+    <typeAliases>
+        <package name="com.qrc.pojo"/>
+    </typeAliases>
+
+    <!--配置数据库的多个连接环境，通过default来切换不同的环境-->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库的连接信息，驱动包、url、用户名、密码-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--数据库的连接信息，驱动包、url、用户名、密码-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/mybatis?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="com/qrc/mapper/UserMapper.xml"/>
+        <!--Mapper代理时可以使用包扫描的方式简化加载        <mapper resource="com/qrc/mapper"/>-->
+    </mappers>
+</configuration>
